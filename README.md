@@ -2,38 +2,61 @@
 
 # O.W.L
 
-**TRUSCOR's measurement instrument: its hands and eyes on real computers.**
+**The measurement instrument. TRUSCOR's hands and eyes on real computers.**
 
-Closed source · used by SOVA Engine, SOVA Black Box and licensed measurers · by [TRUSCOR](https://truscor.org)
+<p>
+  <img src="https://img.shields.io/badge/STATUS-CLOSED%20SOURCE-172B4D?style=for-the-badge" alt="Closed source" />
+  <img src="https://img.shields.io/badge/OPERATES-BROWSER%20%7C%20DESKTOP%20%7C%20SHELL-2EAD33?style=for-the-badge" alt="Operates environments" />
+  <img src="https://img.shields.io/badge/FORMAT-.sova%20OPEN-00B8D9?style=for-the-badge" alt="Open format" />
+  <a href="https://truscor.org"><img src="https://img.shields.io/badge/TRUSCOR-PROJECT%20HOME-0B8793?style=for-the-badge" alt="TRUSCOR" /></a>
+</p>
 
 </div>
 
 ---
 
+## An agent's own report is not evidence
+
+Ask an AI agent what it did and it will tell you. It will tell you it sent the
+email, applied the refund, deleted the row, closed the ticket. Sometimes that
+is true. Sometimes the call returned success and nothing happened. Sometimes
+something else happened.
+
+Every evaluation that trusts the agent's account of itself inherits that gap.
+
+**O.W.L closes it by going and looking.**
+
 ## What it does
 
-An AI agent's own report of what it did isn't evidence. O.W.L checks.
+- **Operates test environments** — browsers, desktops and terminals, driven for real.
+- **Observes what actually happened** and compares it against what the AI claimed.
+- **Records signed evidence**, with a deliberate separation: *the action returned* is stored apart from *the intended effect occurred*. Those are different facts and collapsing them is how bad evaluations happen.
+- **Replays findings** so they can be reproduced and checked by someone else.
 
-- **Operates test environments:** browsers, desktops and terminals.
-- **Observes what really happened** and compares it with what the AI claimed.
-- **Records signed evidence:** every action records "the action returned" separately from "the intended effect happened", in the open `.sova` format.
-- **Replays findings** so they can be reproduced and checked.
+Everything it writes lands in the open `.sova` format, so the measurement is
+portable and inspectable rather than locked in a vendor report.
 
-## Where it fits in the SOVA stack
+## Where it sits in the stack
 
-| Part | Role |
+| Layer | Role |
 |---|---|
 | **O.W.L** | Measures what happened on the machine |
-| [SOVA Engine](https://github.com/TRUSCOR/SOVA-Engine) | Tests AI products using O.W.L |
+| [SOVA Engine](https://github.com/TRUSCOR/SOVA-Engine) | Tests AI products, using O.W.L as its instrument |
 | [SOVA Black Box](https://github.com/TRUSCOR/SOVA-Blackbox) | Records AI systems in production |
-| [TAFAAR](https://github.com/TRUSCOR/TAFAAR) | Grades evidence into the TRUSCOR Rating |
+| [TAFAAR](https://github.com/TRUSCOR/TAFAAR) | Grades evidence into the TRUSCOR Rating (300-900) |
 | [SOVA OSS](https://github.com/TRUSCOR/SOVA-OSS) | The free, open-source toolkit and the open `.sova` format |
+
+*Sova* is the Serbian and Russian word for owl. The naming is not decoration —
+the whole stack is built around watching rather than asking.
 
 ## About this repository
 
-This repository holds public information and demo material for O.W.L. **O.W.L's source code is private.**
+This repository holds public information and demo material for O.W.L.
+**O.W.L's source code is private.**
 
-## See the open part run today
+## See the open layer run today
+
+No model, API key or network needed:
 
 ```bash
 git clone https://github.com/TRUSCOR/SOVA-OSS
@@ -44,4 +67,9 @@ uv run sova demo sleeper
 
 ---
 
-© 2026 TRUSCOR Private Limited. All rights reserved.
+<div align="center">
+
+© 2026 TRUSCOR Private Limited. All rights reserved.<br/>
+<em>Where intelligence meets accountability.</em>
+
+</div>
